@@ -71,29 +71,10 @@ Pod::Spec.new do |spec|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
-  spec.source       = { :http => "https://github.com/kidd0717/Calculator/archive/refs/tags/0.0.2.zip",
-                        :sha1 => '8be3eb74408bd63ad7a0179ea20db4688c483255'  }
-
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
-
+  spec.source       = { :git => "https://github.com/kidd0717/Calculator.git" }
   spec.source_files  = "**/Sources/**/*.swift"
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-  spec.resource_bundles = {'MMYCalculator' => ['**/assets/*.png']}
   # spec.public_header_files = "Classes/**/*.h"
 
 
