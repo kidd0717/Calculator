@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.name         = "MMYCalculator"
   spec.version      = "0.0.2"
   spec.summary      = "A short description of MMYCalculator."
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.swift_version = "5.0"
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -91,9 +91,9 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "**/Sources/**/*.swift"
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
-  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
-
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  spec.resource_bundles = {'MMYCalculator' => ['**/assets/*.png']}
   # spec.public_header_files = "Classes/**/*.h"
 
 
